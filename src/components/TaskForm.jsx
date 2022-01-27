@@ -26,9 +26,7 @@ const TaskForm = () => {
   useEffect(() => {
     const taskFound = tasks.find((task) => task.id === params.id);
 
-    if (taskFound) {
-      setTask(taskFound);
-    }
+    taskFound && setTask(taskFound);
   }, [params.id, tasks]);
 
   return (
